@@ -12,10 +12,10 @@ variables:
   azureSubscription: '623e2929-a545-46ba-a698-a973602fff88'
   
   # Web app name
-  webAppName: 'webappclass'
+  webAppName: 'nondockerwebapp'
 
   # Environment name
-  environmentName: 'webappclass'
+  environmentName: 'nondockerwebapp'
   
   # Agent VM image name
   vmImageName: 'ubuntu-latest'
@@ -60,7 +60,7 @@ stages:
         deploy:
           steps:
           - task: AzureWebApp@1
-            displayName: 'Azure Web App Deploy: webappclass'
+            displayName: 'Azure Web App Deploy: nondockerwebapp'
             inputs:
               azureSubscription: $(azureSubscription)
               appType: webAppLinux
